@@ -19,15 +19,14 @@ experimental-features = nix-command flakes
 
 2. Develop your nix environment
 Note: deactivate the `conda` environment first if it is automatically hooked to your terminal.
-```{bash}
-conda deactivate
-cd exactextract_python
-nix develop
-```
+
+The `.venv` appeared in the directory saved all installed packages and softwares specified in the Flake file.
+![Snapshot1](https://github.com/he134543/Flakes/docs/1.gif)
 
 3. Test if the `exactextract` python binding is successfully installed
-```{bash}
-python
-...
->>> import exactextract
-```
+![Snapshot2](https://github.com/he134543/Flakes/docs/2.gif)
+
+4. Exit the nix environment
+Type `exit` to exit the nix environment, and run `nix develop` to enter the nix env again. If the nix env has been successfully built last time with the `.venv` presents, the second time will automatically identify the `.venv` and skip the process of downloading/installing packages.
+
+![Snapshot3](https://github.com/he134543/Flakes/docs/3.gif)
