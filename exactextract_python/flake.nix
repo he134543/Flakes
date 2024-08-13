@@ -65,9 +65,7 @@
           unset SOURCE_DATE_EPOCH
           pip install --upgrade pip
           pip install -U p_tqdm
-          cd exactextract
-          pip install .
-          cd ..
+          pip install git+https://github.com/isciences/exactextract/tree/afb834bc9f13d0b55952fe91e4cbc7c840c7d10f
         '';
 
         postShellHook = ''
